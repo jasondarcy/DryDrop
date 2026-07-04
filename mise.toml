@@ -1,2 +1,21 @@
+experimental_monorepo_root = true
+
+[env]
+MISE_EXPERIMENTAL = true
+
+[monorepo]
+config_roots = [
+    "apps/*"
+]
+
 [tools]
 rust = "1.96.0"
+
+[tasks."cli-dev"]
+run = "mise run //apps/cli:dev"
+
+[tasks."tui-dev"]
+run = "mise run //apps/tui:dev"
+
+[tasks."desktop-dev"]
+run = "mise run //apps/desktop:dev"

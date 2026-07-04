@@ -6,4 +6,7 @@ impl Variables {
     pub fn new() -> Self {
         Self(HashMap::new())
     }
+    pub fn value(&self) -> &HashMap<String, String> {
+        &self.0
+    }
 }

@@ -7,7 +7,7 @@ pub struct GenerationOutput {
 impl GenerationOutput {
     pub fn new(project_dir: PathBuf) -> Self {
         Self {
-            project_dir,
+            project_dir: project_dir,
         }
     }
 }

@@ -16,6 +16,20 @@ impl Template {
             variables: Vec::new(),
         }
     }
-    // pub fn render(&self) -> ;
-    // pub fn render_file(&self) -> ;
+    // Todo
+    pub fn walk_dir() -> Self {
+        Self {
+            module: Module::new(),
+            root: VfsTree::new(),
+            variables: Vec::new(),
+        }
+    }
+    pub fn get_by_name(name: impl Into<String>) -> Self {
+        let template = Template {
+            module: Module::new(),
+            root: VfsTree::new(),
+            variables: Vec::new(),
+        };
+        template
+    }
 }

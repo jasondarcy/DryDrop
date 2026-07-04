@@ -6,7 +6,6 @@ members = ["apps/*", "crates/*"]
 clap = { version = "4.6.1", features = ["derive"] }
 
 tera = "2.0.0"
-minijinja = "2.21.0"
 
 miniserde = { version = "0.1.45", features = ["std"] }
 thiserror = "2.0.18"
