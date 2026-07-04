@@ -1,0 +1,11 @@
+[package]
+name = "drydrop-registry"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+drydrop-template = { path = "../drydrop-template" }
+drydrop-plugin = { path = "../drydrop-plugin" }
+drydrop-snippet = { path = "../drydrop-snippet" }
+async-trait = { workspace = true }
+indexmap = { workspace = true }

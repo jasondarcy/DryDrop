@@ -1,0 +1,7 @@
+[package]
+name = "drydrop-snippet"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+drydrop-core = { path = "../drydrop-core" }

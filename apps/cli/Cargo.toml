@@ -1,0 +1,9 @@
+[package]
+name = "cli"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+drydrop-generator = { path = "../../crates/drydrop-generator" }
+clap = { workspace = true }
+eyre = { workspace = true }
