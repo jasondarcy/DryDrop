@@ -1,0 +1,14 @@
+use axum::{routing::get, Router};
+
+#[tokio::main]
+async fn main() {
+    let app = Router::new().route("/", get(|| async { "Hello from {{ project_name }}" }));
+
+    let listener = tokio::net::TcpListener::bind("127.0.0.1:3000")
+        .await
+        .expect("failed to bind listener");
+
+    axum::serve(listener, app)
+        .await
+        .expect("server failed");
+}
