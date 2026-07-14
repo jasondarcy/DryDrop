@@ -6,6 +6,7 @@ edition = "2024"
 [dependencies]
 drydrop-generator = { path = "../../crates/drydrop-generator" }
 drydrop-fs = { path = "../../crates/drydrop-fs" }
+drydrop-error = { path = "../../crates/drydrop-error" }
 clap = { workspace = true }
 eyre = { workspace = true }
 tera = { workspace = true }

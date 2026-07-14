@@ -1,9 +1,6 @@
-use crate::context::GenerationContext;
-use crate::output::GenerationOutput;
-use drydrop_core::error::DryDropResult;
 use drydrop_registry::{LocalRegistry, RemoteRegistry};
 
-pub mod context;
+pub mod input;
 pub mod merge;
 pub mod output;
 pub mod pipeline;
@@ -21,19 +18,5 @@ impl<L: LocalRegistry, R: RemoteRegistry> Generator<L, R> {
             local_registry,
             remote_registry,
         }
-    }
-    // Todo
-    pub fn generate(
-        &self,
-        context: impl AsRef<GenerationContext>,
-    ) -> DryDropResult<GenerationOutput> {
-        let project_dir = context
-            .as_ref()
-            .to_owned()
-            .project
-            .output_dir
-            .value()
-            .to_owned();
-        Ok(GenerationOutput::new(project_dir))
     }
 }

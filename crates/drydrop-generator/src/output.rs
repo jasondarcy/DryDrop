@@ -1,13 +1,7 @@
-use std::path::PathBuf;
-
-pub struct GenerationOutput {
-    pub project_dir: PathBuf,
-}
+pub struct GenerationOutput;
 
 impl GenerationOutput {
-    pub fn new(project_dir: PathBuf) -> Self {
-        Self {
-            project_dir: project_dir,
-        }
+    pub fn new() -> Self {
+        Self
     }
 }

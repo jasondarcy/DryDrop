@@ -6,16 +6,6 @@ pub struct VfsTree {
 
 impl VfsTree {
     pub fn new() -> Self {
-        Self {
-            root: Node::new(),
-        }
-    }
-}
-
-impl Default for VfsTree {
-    fn default() -> Self {
-        Self {
-            root: Node::new(),
-        }
+        Self { root: Node::new() }
     }
 }

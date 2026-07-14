@@ -108,6 +108,7 @@ name = "cli"
 version = "0.1.0"
 dependencies = [
  "clap",
+ "drydrop-error",
  "drydrop-fs",
  "drydrop-generator",
  "eyre",
@@ -129,14 +130,6 @@ name = "drydrop-config"
 version = "0.1.0"
 
 [[package]]
-name = "drydrop-core"
-version = "0.1.0"
-dependencies = [
- "eyre",
- "thiserror",
-]
-
-[[package]]
 name = "drydrop-diff"
 version = "0.1.0"
 
@@ -148,6 +141,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "drydrop-error"
+version = "0.1.0"
+dependencies = [
+ "thiserror",
+]
+
+[[package]]
 name = "drydrop-feature"
 version = "0.1.0"
 
@@ -155,15 +155,15 @@ version = "0.1.0"
 name = "drydrop-fs"
 version = "0.1.0"
 dependencies = [
- "drydrop-core",
+ "drydrop-error",
 ]
 
 [[package]]
 name = "drydrop-generator"
 version = "0.1.0"
 dependencies = [
- "drydrop-core",
  "drydrop-engine",
+ "drydrop-error",
  "drydrop-registry",
 ]
 
@@ -174,12 +174,13 @@ version = "0.1.0"
 [[package]]
 name = "drydrop-plugin"
 version = "0.1.0"
-dependencies = [
- "drydrop-core",
-]
 
 [[package]]
 name = "drydrop-preset"
+version = "0.1.0"
+
+[[package]]
+name = "drydrop-project"
 version = "0.1.0"
 
 [[package]]
@@ -196,15 +197,11 @@ dependencies = [
 [[package]]
 name = "drydrop-snippet"
 version = "0.1.0"
-dependencies = [
- "drydrop-core",
-]
 
 [[package]]
 name = "drydrop-template"
 version = "0.1.0"
 dependencies = [
- "drydrop-core",
  "drydrop-vfs",
 ]
 

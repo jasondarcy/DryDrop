@@ -12,9 +12,3 @@ impl Node {
         Self::None
     }
 }
-
-impl Default for Node {
-    fn default() -> Self {
-        Self::None
-    }
-}

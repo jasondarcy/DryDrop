@@ -1,6 +1,6 @@
-pub mod node;
-pub mod file;
 pub mod directory;
+pub mod file;
 pub mod merge;
-pub mod tree;
+pub mod node;
 pub mod traits;
+pub mod tree;

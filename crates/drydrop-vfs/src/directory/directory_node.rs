@@ -1,6 +1,6 @@
-use std::collections::BTreeMap;
 use crate::directory::directory_name::DirectoryName;
 use crate::node::Node;
+use std::collections::BTreeMap;
 
 pub struct DirectoryNode {
     pub name: DirectoryName,

@@ -1,9 +1,9 @@
 pub mod new;
 
-use clap::Subcommand;
 use crate::args::new::NewArgs;
+use clap::Subcommand;
 
 #[derive(Subcommand)]
 pub enum Commands {
-    New(NewArgs)
+    New(NewArgs),
 }

@@ -1,5 +1,5 @@
-use clap::Parser;
 pub(crate) use crate::commands::Commands;
+use clap::Parser;
 
 pub mod new;
 
