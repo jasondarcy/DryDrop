@@ -5,11 +5,13 @@ MISE_EXPERIMENTAL = true
 
 [monorepo]
 config_roots = [
-    "apps/*"
+    "apps/*",
+    "docs/*"
 ]
 
 [tools]
-rust = "1.96.0"
+"rust" = {version = "1.96.0",components = ["cargo", "rustfmt", "clippy", "rust-analyzer"]}
+"mdbook" = "0.5.4"
 
 [tasks."cli-dev"]
 run = "mise run //apps/cli:dev"
@@ -19,3 +21,15 @@ run = "mise run //apps/tui:dev"
 
 [tasks."desktop-dev"]
 run = "mise run //apps/desktop:dev"
+
+[tasks.fmt]
+run = "cargo fmt --all -v"
+
+[tasks.lint]
+run = "cargo clippy --workspace --all-targets"
+
+[tasks.test]
+run = "cargo test --workspace"
+
+[tasks.verify]
+run = "cargo clippy --workspace --all-targets && cargo test --workspace"
