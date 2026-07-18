@@ -12,6 +12,12 @@ pub enum DryDropError {
     TemplateRender(String),
     #[error("File already exists: {0}, refuse to overwrite it")]
     FileAlreadyExists(String),
+    #[error("Duplicate path in VFS: {0}")]
+    DuplicatePath(String),
+    #[error("Path conflict in VFS: {0}")]
+    PathConflict(String),
+    #[error("Invalid VFS path: {0}")]
+    InvalidPath(String),
     #[error("Filesystem error: {0}")]
     Io(#[from] std::io::Error),
 }

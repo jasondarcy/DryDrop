@@ -7,3 +7,5 @@ edition = "2024"
 drydrop-registry = { path = "../drydrop-registry" }
 drydrop-engine = { path = "../drydrop-engine" }
 drydrop-error = { path = "../drydrop-error" }
+drydrop-fs = { path = "../drydrop-fs" }
+tera = { workspace = true }

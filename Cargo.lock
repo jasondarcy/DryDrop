@@ -112,7 +112,6 @@ dependencies = [
  "drydrop-fs",
  "drydrop-generator",
  "eyre",
- "tera",
 ]
 
 [[package]]
@@ -156,6 +155,7 @@ name = "drydrop-fs"
 version = "0.1.0"
 dependencies = [
  "drydrop-error",
+ "drydrop-vfs",
 ]
 
 [[package]]
@@ -164,7 +164,9 @@ version = "0.1.0"
 dependencies = [
  "drydrop-engine",
  "drydrop-error",
+ "drydrop-fs",
  "drydrop-registry",
+ "tera",
 ]
 
 [[package]]
@@ -208,6 +210,9 @@ dependencies = [
 [[package]]
 name = "drydrop-vfs"
 version = "0.1.0"
+dependencies = [
+ "drydrop-error",
+]
 
 [[package]]
 name = "equivalent"

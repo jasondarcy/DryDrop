@@ -10,8 +10,21 @@ pub struct DirectoryNode {
 impl DirectoryNode {
     pub fn new() -> Self {
         Self {
-            name: DirectoryName::new(),
+            name: DirectoryName::root(),
             children: BTreeMap::new(),
         }
+    }
+
+    pub fn with_name(name: impl Into<String>) -> Self {
+        Self {
+            name: DirectoryName::new(name),
+            children: BTreeMap::new(),
+        }
+    }
+}
+
+impl Default for DirectoryNode {
+    fn default() -> Self {
+        Self::new()
     }
 }

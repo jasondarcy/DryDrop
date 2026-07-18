@@ -7,6 +7,10 @@ pub mod pipeline;
 pub mod planner;
 pub mod resolver;
 
+pub use input::{find_templates_root, GenerationInput};
+pub use output::GenerationOutput;
+pub use pipeline::generate_project;
+
 pub struct Generator<L: LocalRegistry, R: RemoteRegistry> {
     pub local_registry: L,
     pub remote_registry: R,

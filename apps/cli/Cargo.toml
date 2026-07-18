@@ -9,4 +9,3 @@ drydrop-fs = { path = "../../crates/drydrop-fs" }
 drydrop-error = { path = "../../crates/drydrop-error" }
 clap = { workspace = true }
 eyre = { workspace = true }
-tera = { workspace = true }

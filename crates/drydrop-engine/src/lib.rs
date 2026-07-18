@@ -7,3 +7,9 @@ impl Engine {
         Self::Tera(tera::Context::new())
     }
 }
+
+impl Default for Engine {
+    fn default() -> Self {
+        Self::new()
+    }
+}
